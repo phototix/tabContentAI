@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenAI Image Processor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>OpenAI Settings</h1>
+    <div class="form-group">
+      <label for="apiKey">OpenAI API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+    </div>
+    <div class="form-group">
+      <label for="prompt">Default Prompt:</label>
+      <textarea id="prompt" rows="4" placeholder="Enter your default prompt for processing"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="autocapture">Auto-Capture:</label>
+      <select id="autocapture">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="autocaptureinterval">Auto-Capture Interval:</label>
+      <select id="autocaptureinterval">
+        <option value="5000">5 secs</option>
+        <option value="10000">10 secs</option>
+        <option value="15000">15 secs</option>
+        <option value="16000">16 secs</option>
+        <option value="17000">17 secs</option>
+        <option value="18000">18 secs</option>
+        <option value="19000">19 secs</option>
+        <option value="20000">20 secs</option>
+        <option value="25000">25 secs</option>
+        <option value="30000">30 secs</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="model">Model:</label>
+      <select id="model">
+        <option value="gpt-4">GPT-4</option>
+        <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        <option value="gpt-4o" selected>GPT-4 Vision</option>
+        <option value="gpt-4-turbo">GPT-4 Turbo</option>
+      </select>
+    </div>
+    <button id="save">Save Settings</button>
+    <div id="status"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
